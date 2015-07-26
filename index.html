@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creating a Data Product</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Creating a Data Product">
+  <meta name="author" content="Ruth Akintunde">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Creating a Data Product</h1>
+    <h2>Using shiny app</h2>
+    <p>Ruth Akintunde<br/>Data Scientist</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>How does my shiny app work?</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>The shiny app published on shinyapps.io</h3>
+
+<p>(<a href="https://damilolah.shinyapps.io/course_project">https://damilolah.shinyapps.io/course_project</a>) </p>
+
+<h3>is a simple one paged web application that does two things:</h3>
+
+<ul>
+<li><p>Predicts that a certain patient has malaria </p></li>
+<li><p>Shows a drop down list of some datasets in R </p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Predicts that a certain patient has malaria</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Allows the user enter the amount of malaria parasite in the blood and then outputs the patient&#39;s probabilty of having malaria.</p></li>
+<li><p>Here is the calculation, assuming the user enters 150,000 parasite in the blood per microlitre</p></li>
+</ul>
+
+<pre><code class="r">malariaRisk &lt;- function(parasite){
+  parasite/200000
+
+}
+malariaRisk(150000)
+</code></pre>
+
+<pre><code>## [1] 0.75
+</code></pre>
+
+<p>The probability of having malaria is 0.75</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Shows a drop down list of some datasets in R</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Allows the user select dataset from the dropdown list.This displays the dataset on the right hand side of the page.</li>
+<li>When the user then clicks on the &#39;Download&#39; button, the dataset is downloaded to the user&#39;s device.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The end!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The server.R and ui.R can be found here: 
+<a href="https://github.com/damilolah/course_project_data_product/tree/master">https://github.com/damilolah/course_project_data_product/tree/master</a></p>
+
+<p>Have fun and enjoy the app.</p>
+
+<p>Thanks.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='How does my shiny app work?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Predicts that a certain patient has malaria'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Shows a drop down list of some datasets in R'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='The end!'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

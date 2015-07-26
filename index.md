@@ -1,0 +1,68 @@
+---
+title       : Creating a Data Product
+subtitle    : Using shiny app
+author      : Ruth Akintunde
+job         : Data Scientist
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+
+--- .class #id 
+
+
+##  How does my shiny app work?
+### The shiny app published on shinyapps.io 
+(https://damilolah.shinyapps.io/course_project) 
+### is a simple one paged web application that does two things:
+
+- Predicts that a certain patient has malaria 
+
+- Shows a drop down list of some datasets in R 
+
+--- .class #id 
+
+## Predicts that a certain patient has malaria
+
+
+- Allows the user enter the amount of malaria parasite in the blood and then outputs the patient's probabilty of having malaria.
+
+- Here is the calculation, assuming the user enters 150,000 parasite in the blood per microlitre
+
+
+```r
+malariaRisk <- function(parasite){
+  parasite/200000
+  
+}
+malariaRisk(150000)
+```
+
+```
+## [1] 0.75
+```
+
+The probability of having malaria is 0.75
+
+--- .class #id 
+
+## Shows a drop down list of some datasets in R
+
+- Allows the user select dataset from the dropdown list.This displays the dataset on the right hand side of the page.
+- When the user then clicks on the 'Download' button, the dataset is downloaded to the user's device.
+
+--- .class #id 
+
+## The end!
+
+The server.R and ui.R can be found here: 
+https://github.com/damilolah/course_project_data_product/tree/master
+
+Have fun and enjoy the app.
+
+Thanks.
+
+
